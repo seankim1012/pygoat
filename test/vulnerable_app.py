@@ -8,9 +8,9 @@ app = Flask(__name__)
 def get_user():
     name = request.args.get("name")
     conn = sqlite3.connect("app.db")
-    # SQL injection: user input concatenated into the query
-    query = "SELECT * FROM users WHERE name = '" + name + "'"
-    return str(conn.execute(query).fetchall())
+    # Use a parameterized query to prevent SQL injection
+    query = "SELECT * FROM users WHERE name = ?"
+    return str(conn.execute(query, (name,)).fetchall())
 
 @app.route("/ping")
 def ping():

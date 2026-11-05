@@ -1,12 +1,3 @@
-"""
-SEEDED VULNERABLE CODE - FOR SCANNER EVALUATION ONLY
-Intentionally insecure. Do not run, deploy, or expose this file.
-Each flaw is tagged SEED-Pxxx so results can be matched to manifest_pygoat.csv.
-
-Place in your PyGoat fork at: demo/seeded_vulns.py
-(do NOT put it under a "test" folder; CodeQL hides alerts in test code).
-Standalone Flask app: PyGoat is Django and never imports this file.
-"""
 import hashlib
 import os
 import pickle
